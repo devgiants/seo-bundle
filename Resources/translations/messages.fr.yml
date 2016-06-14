@@ -1,0 +1,15 @@
+seo:
+    form:
+        label: Référencement
+        title: 
+            name: Titre
+            exemple: "Exemple de balise <title>"
+            maxCar: "60 caractères max"
+        description: 
+            name: Description
+            exemple: Exemple de balise meta description
+            maxCar: 155 caractères max
+        url: 
+            name: "URL simplifliée"
+            generate: "Générer"
+            infos: "Le lien sera : "

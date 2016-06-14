@@ -1,4 +1,12 @@
 services:
-#    dev_giants_seo.example:
-#        class: devGiants\SeoBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
+    devgiants.seo.tools:
+        class: devGiants\SeoBundle\Service\Tools
+        arguments: ['@service_container']
+
+    # Twig Extensions
+    devgiants.seo.twig_extension:
+        class: devGiants\SeoBundle\Twig\Extension\SeoExtension
+        public: false
+        arguments: ["@service_container"]
+        tags:
+            - { name: twig.extension }

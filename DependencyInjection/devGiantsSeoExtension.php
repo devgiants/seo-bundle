@@ -2,6 +2,7 @@
 
 namespace devGiants\SeoBundle\DependencyInjection;
 
+use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
@@ -12,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class devGiantsSeoExtension extends Extension
+class devGiantsSeoExtension extends Extension implements CompilerPassInterface
 {
     /**
      * {@inheritdoc}
@@ -24,5 +25,12 @@ class devGiantsSeoExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+    }
+
+    public function process(ContainerBuilder $container)
+    {
+//        if($container->hasParameter('knp.doctrine_behaviors.reflection.class_analyzer.class')) {
+            $container->setParameter('knp.doctrine_behaviors.reflection.class_analyzer.class', 'devGiants\SeoBundle\Reflection\ClassAnalyzer');
+//        }
     }
 }

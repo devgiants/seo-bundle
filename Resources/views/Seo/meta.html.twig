@@ -1,0 +1,22 @@
+
+{# 
+	How to include this file :
+	
+	With an entity in front :
+    {% block seo %}
+        {% include '@LCHSeo/Seo/meta.html.twig' with {'entity' : offer} only %}
+    {% endblock %}
+
+    Without entity for a normal page :
+    {% block seo %}
+        {% include '@LCHSeo/Seo/meta.html.twig' with {'title' : "The title", 'description' : "The description"} only %}
+    {% endblock %}
+ #}
+
+{% if entity is defined and entity is not null %}
+    <title>{{ entity.seoTitle }}</title>
+    <meta name="description" content="{{ entity.seoDescription }}" />
+{% else %}
+	<title>{{ (title is defined) ? title : 'Welcome!' }}</title>
+    <meta name="description" content="{{ (description is defined) ? title : 'Content de base' }}" />
+{% endif %}
