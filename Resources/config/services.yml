@@ -1,0 +1,4 @@
+services:
+#    dev_giants_seo.example:
+#        class: devGiants\SeoBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
