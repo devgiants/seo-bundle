@@ -1,3 +1,5 @@
+parameters:
+    devgiants.seo.seoable_trait: devGiants\SeoBundle\Behaviour\Seoable
 services:
     devgiants.seo.tools:
         class: devGiants\SeoBundle\Service\Tools
@@ -10,3 +12,12 @@ services:
         arguments: ["@service_container"]
         tags:
             - { name: twig.extension }
+
+    devgiants.seo.seoable_subscriber:
+        class: devGiants\SeoBundle\ORM\SeoableSubscriber
+        public: false
+        arguments:
+            - "@knp.doctrine_behaviors.reflection.class_analyzer"
+            - "%devgiants.seo.seoable_trait%"
+        tags:
+            - { name: doctrine.event_subscriber }

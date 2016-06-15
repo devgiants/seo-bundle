@@ -29,8 +29,7 @@ class devGiantsSeoExtension extends Extension implements CompilerPassInterface
 
     public function process(ContainerBuilder $container)
     {
-//        if($container->hasParameter('knp.doctrine_behaviors.reflection.class_analyzer.class')) {
-            $container->setParameter('knp.doctrine_behaviors.reflection.class_analyzer.class', 'devGiants\SeoBundle\Reflection\ClassAnalyzer');
-//        }
+        // Override KNP DoctrineBehaviors class analyzer to enable ancestor traits search
+        $container->setParameter('knp.doctrine_behaviors.reflection.class_analyzer.class', 'devGiants\SeoBundle\Reflection\ClassAnalyzer');
     }
 }

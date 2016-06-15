@@ -23,7 +23,6 @@ class ClassAnalyzer extends \Knp\DoctrineBehaviors\Reflection\ClassAnalyzer
      */
     public function hasTrait(\ReflectionClass $class, $traitName, $isRecursive = false)
     {
-        die('bim');
         $classTraits = $class->getTraitNames();
         // Trait directly present in final class
         if (in_array($traitName, $classTraits)) {
