@@ -1,14 +1,14 @@
 {
-  "name": "Devgiants/seo-bundle",
+  "name": "devgiants/seo-bundle",
   "description": "Provides SEO utilities for Symfony forms",
   "type":         "library",
   "keywords":     ["SEO", "admin"],
-  "homepage":     "http://knplabs.com",
+  "homepage":     "http://devgiants.fr",
   "license":      "MIT",
   "authors":      [
     {
       "name":     "Nicolas BONNIOT",
-      "homepage": "http://Devgiants.fr"
+      "homepage": "http://devgiants.fr"
     }
   ],
   "require":      {
