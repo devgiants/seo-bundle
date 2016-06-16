@@ -1,5 +1,5 @@
 <?php
-namespace devGiants\SeoBundle\Behaviour;
+namespace Devgiants\SeoBundle\Behaviour;
 
 use Doctrine\ORM\Mapping as ORM;
 use Knp\DoctrineBehaviors\Model as ORMBehaviors;

@@ -1,6 +1,6 @@
 <?php
 
-namespace devGiants\SeoBundle\Controller;
+namespace Devgiants\SeoBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;

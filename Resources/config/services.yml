@@ -1,20 +1,20 @@
 parameters:
-    devgiants.seo.seoable_trait: devGiants\SeoBundle\Behaviour\Seoable
+    devgiants.seo.seoable_trait: Devgiants\SeoBundle\Behaviour\Seoable
 services:
     devgiants.seo.tools:
-        class: devGiants\SeoBundle\Service\Tools
+        class: Devgiants\SeoBundle\Service\Tools
         arguments: ['@service_container']
 
     # Twig Extensions
     devgiants.seo.twig_extension:
-        class: devGiants\SeoBundle\Twig\Extension\SeoExtension
+        class: Devgiants\SeoBundle\Twig\Extension\SeoExtension
         public: false
         arguments: ["@service_container"]
         tags:
             - { name: twig.extension }
 
     devgiants.seo.seoable_subscriber:
-        class: devGiants\SeoBundle\ORM\SeoableSubscriber
+        class: Devgiants\SeoBundle\ORM\SeoableSubscriber
         public: false
         arguments:
             - "@knp.doctrine_behaviors.reflection.class_analyzer"

@@ -6,7 +6,7 @@
  * Time: 16:42
  */
 
-namespace devGiants\SeoBundle\Behaviour;
+namespace Devgiants\SeoBundle\Behaviour;
 
 trait SeoProperties
 {

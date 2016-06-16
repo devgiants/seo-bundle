@@ -1,6 +1,6 @@
 <?php
 
-namespace devGiants\SeoBundle\DependencyInjection;
+namespace Devgiants\SeoBundle\DependencyInjection;
 
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader;
  *
  * @link http://symfony.com/doc/current/cookbook/bundles/extension.html
  */
-class devGiantsSeoExtension extends Extension implements CompilerPassInterface
+class DevgiantsSeoExtension extends Extension implements CompilerPassInterface
 {
     /**
      * {@inheritdoc}
@@ -30,6 +30,6 @@ class devGiantsSeoExtension extends Extension implements CompilerPassInterface
     public function process(ContainerBuilder $container)
     {
         // Override KNP DoctrineBehaviors class analyzer to enable ancestor traits search
-        $container->setParameter('knp.doctrine_behaviors.reflection.class_analyzer.class', 'devGiants\SeoBundle\Reflection\ClassAnalyzer');
+        $container->setParameter('knp.doctrine_behaviors.reflection.class_analyzer.class', 'Devgiants\SeoBundle\Reflection\ClassAnalyzer');
     }
 }

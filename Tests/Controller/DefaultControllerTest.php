@@ -1,6 +1,6 @@
 <?php
 
-namespace devGiants\SeoBundle\Tests\Controller;
+namespace Devgiants\SeoBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

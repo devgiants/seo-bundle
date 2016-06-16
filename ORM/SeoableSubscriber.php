@@ -4,7 +4,7 @@
  * Freely released with no restrictions, re-license however you'd like!
  */
 
-namespace devGiants\SeoBundle\ORM;
+namespace Devgiants\SeoBundle\ORM;
 
 use Doctrine\ORM\Event\LifecycleEventArgs;
 use Knp\DoctrineBehaviors\Reflection\ClassAnalyzer;

@@ -1,12 +1,11 @@
 <?php
 
-namespace devGiants\SeoBundle\Form;
+namespace Devgiants\SeoBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\Form\FormView;
-use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,7 +14,7 @@ class SeoType extends AbstractType
     /**
      * The form name
      */
-    const NAME = 'lch_seobundle_seo';
+    const NAME = 'devgiants_seobundle_seo';
 
     /**
      * @param FormBuilderInterface $builder
@@ -46,7 +45,6 @@ class SeoType extends AbstractType
     {
         $resolver->setDefaults(array(
             'inherit_data' => true,
-            'entity' => null
         ));
     }
 
@@ -60,9 +58,9 @@ class SeoType extends AbstractType
     {
         parent::buildView($view, $form, $options);
 
-        $view->vars = array_merge($view->vars, array(
-            'entity' => $options['entity']
-        ));
+//        $view->vars = array_merge($view->vars, array(
+//            'entity' => $options['entity']
+//        ));
     }
 
     /**

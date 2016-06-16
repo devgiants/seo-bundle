@@ -1,6 +1,6 @@
 <?php
 
-namespace devGiants\SeoBundle\DependencyInjection;
+namespace Devgiants\SeoBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -18,11 +18,16 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('devgiants_seo');
+        $rootNode = $treeBuilder->root('Devgiants');
 
         // Here you should define the parameters that are allowed to
         // configure your bundle. See the documentation linked above for
         // more information on that topic.
+
+        $rootNode
+            ->children()
+                ->booleanNode('bootstrap')
+            ->end();
 
         return $treeBuilder;
     }

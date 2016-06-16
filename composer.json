@@ -1,5 +1,5 @@
 {
-  "name": "devgiants/seo-bundle",
+  "name": "Devgiants/seo-bundle",
   "description": "Provides SEO utilities for Symfony forms",
   "type":         "library",
   "keywords":     ["SEO", "admin"],
@@ -8,7 +8,7 @@
   "authors":      [
     {
       "name":     "Nicolas BONNIOT",
-      "homepage": "http://devgiants.fr"
+      "homepage": "http://Devgiants.fr"
     }
   ],
   "require":      {

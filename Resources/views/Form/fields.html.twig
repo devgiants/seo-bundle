@@ -1,4 +1,4 @@
-{% block lch_seobundle_seo_widget %}
+{% block devgiants_seobundle_seo_widget %}
 
 	<div class="panel panel-default">
 	    <div class="panel-heading">
@@ -24,7 +24,7 @@
 	                </div>
 	                <div class="collapse" id="collapseSeoTitle">
 	                    <div class="well">
-	                        {% image '@LCHSeoBundle/Resources/public/images/seo-help-title.png' %}
+	                        {% image '@DevgiantsSeoBundle/Resources/public/images/seo-help-title.png' %}
 	                        <img src="{{ asset_url }}" alt="" />
 	                        {% endimage %}
 	                    </div>
@@ -51,14 +51,13 @@
 	                </div>
 	                <div class="collapse" id="collapseSeoDescription">
 	                    <div class="well">
-	                        {% image '@LCHSeoBundle/Resources/public/images/seo-help-description.png' %}
+	                        {% image '@DevgiantsSeoBundle/Resources/public/images/seo-help-description.png' %}
 	                        <img src="{{ asset_url }}" alt="" />
 	                        {% endimage %}
 	                    </div>
 	                </div>
 	            </div>
 	        </div>
-{#{{ dump(form) }}#}
 	        <div class="form-group">
 	            <div class="col-md-2">
 	                {{ form_label(form.slug) }}
@@ -68,9 +67,9 @@
 	                {{ form_errors(form.slug) }}
 	            </div>
 	            <div class="col-md-2">
-	                < class="btn btn-default" role="button" id="generateSlug" data-url="{{path('lch_seo_getslug')}}" data-id="{{form.vars.value.id}}" data-entityClass="{{ getClassName(form.vars.value) }}">
+	                <a class="btn btn-default" role="button" id="generateSlug" data-url="{{path('devgiants_seo_get_slug')}}" data-id="{{form.vars.value.id}}" data-entityClass="{{ getClassName(form.vars.value) }}">
 	                  {{ 'seo.form.url.generate' | trans }}
-	                </
+	                </a>
 	            </div>
 	            <div class="col-md-2">
 	                <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>

@@ -1,6 +1,6 @@
 <?php
 
-namespace devGiants\SeoBundle\Service;
+namespace Devgiants\SeoBundle\Service;
 
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -60,29 +60,30 @@ class Tools {
      */
     public function getFrontUrlRedirection($id, $slug, $entityClass)
     {
-        $currentSite = $this->container->get('session')->get('currentSite');
-
-        switch ($entityClass) {
-            case 'Offer':
-                $entityUrl = $this->container->get('router')->generate('lch_app_offer_front_show', array('id' => $id, 'slug' => $slug));
-                break;
-            case 'OfferCategory':
-                $entityUrl = $this->container->get('router')->generate('lch_app_offercategory_front', array('id' => $id, 'slug' => $slug));
-                break;
-            case 'Testimonial':
-                $entityUrl = $this->container->get('router')->generate('lch_app_testimonial_front', array('id' => $id, 'slug' => $slug));
-                break;
-            case 'Thematique':
-                $entityUrl = $this->container->get('router')->generate('lch_app_thematique_front', array('id' => $id, 'slug' => $slug));
-                break;
-            case 'EventSell':
-                $entityUrl = $this->container->get('router')->generate('lch_app_event_sell_front', array('id' => $id, 'slug' => $slug));
-                break;
-            default:
-                $entityUrl = "/exemple/".$id."-".$slug;
-                break;
-        }
-
-        return "http://".$currentSite->getDomainName().$entityUrl;
+//        $currentSite = $this->container->get('session')->get('currentSite');
+//
+//        switch ($entityClass) {
+//            case 'Offer':
+//                $entityUrl = $this->container->get('router')->generate('lch_app_offer_front_show', array('id' => $id, 'slug' => $slug));
+//                break;
+//            case 'OfferCategory':
+//                $entityUrl = $this->container->get('router')->generate('lch_app_offercategory_front', array('id' => $id, 'slug' => $slug));
+//                break;
+//            case 'Testimonial':
+//                $entityUrl = $this->container->get('router')->generate('lch_app_testimonial_front', array('id' => $id, 'slug' => $slug));
+//                break;
+//            case 'Thematique':
+//                $entityUrl = $this->container->get('router')->generate('lch_app_thematique_front', array('id' => $id, 'slug' => $slug));
+//                break;
+//            case 'EventSell':
+//                $entityUrl = $this->container->get('router')->generate('lch_app_event_sell_front', array('id' => $id, 'slug' => $slug));
+//                break;
+//            default:
+//                $entityUrl = "/exemple/".$id."-".$slug;
+//                break;
+//        }
+//
+//
+//        return "http://test.com".$entityUrl;
     }
 }

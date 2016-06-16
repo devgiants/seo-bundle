@@ -1,6 +1,6 @@
 <?php
 
-namespace devGiants\SeoBundle\Form\Extension;
+namespace Devgiants\SeoBundle\Form\Extension;
 
 use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\Form\AbstractTypeExtension;

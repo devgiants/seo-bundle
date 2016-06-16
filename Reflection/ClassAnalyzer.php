@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace devGiants\SeoBundle\Reflection;
+namespace Devgiants\SeoBundle\Reflection;
 
 class ClassAnalyzer extends \Knp\DoctrineBehaviors\Reflection\ClassAnalyzer
 {   
