@@ -13,6 +13,7 @@
   ],
   "require":      {
     "php":  ">=5.3.0",
+    "devgiants/components": "master",
     "knplabs/doctrine-behaviors": "~1.1"
   }
 }
